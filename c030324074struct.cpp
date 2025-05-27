@@ -11,15 +11,19 @@ struct mahasiswa{
 
 int main(){
 
-    mahasiswa hikmal;
+    mahasiswa* hikmal = new mahasiswa;
 
-    hikmal.nim="c030324074";
-    hikmal.nama="M. Hikmal";
-    hikmal.alamat="Jl. Cempaka Raya Simp. Pinang Babaris";
-    hikmal.ipk=4;
+    hikmal->nim = "c030324074";
+    hikmal->nama = "M. Hikmal";
+    hikmal->alamat = "Jl. Cempaka Raya Simp. Pinang Babaris";
+    hikmal->ipk = 4;
 
-    cout << hikmal.nim<<"\n";
-    cout << hikmal.nama<<"\n";
-    cout << hikmal.alamat<<"\n";
-    cout << hikmal.ipk<<"\n";
+    cout << hikmal->nim << "\n";
+    cout << hikmal->nama << "\n";
+    cout << hikmal->alamat << "\n";
+    cout << hikmal->ipk << "\n";
+
+    delete hikmal;
+
+    return 0;
 }
