@@ -16,6 +16,7 @@ int Full(Stack *S);
 int Empty(Stack *S);
 void Pop(Stack *S, itemType *x);
 void Push(Stack *S, itemType x);
+void display(Stack *S);
 
 int main(int argc, char const *argv[])
 {
@@ -57,4 +58,14 @@ void Push(Stack *S, itemType x){
         S->Item[S->Count] = x;
         ++(S->Count);
     }
+}
+
+void display (Stack *S){
+    cout << "Menampilkan stack" << endl;
+
+    for (int i = (S->Count) - 1; i >= 0; --i)
+    {
+        cout << S->Item[i] << endl;
+    }
+    
 }
