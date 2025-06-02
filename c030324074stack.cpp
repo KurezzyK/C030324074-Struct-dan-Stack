@@ -12,8 +12,9 @@ typedef struct stack
 } Stack;
 
 void InitializeStack(Stack *S);
+int full(Stack *S);
 
-int main(int argc, char const *argb[])
+int main(int argc, char const *argv[])
 {
     Stack S;
     itemType x;
@@ -25,4 +26,8 @@ int main(int argc, char const *argb[])
 
 void InitializeStack(Stack *S){
     S->Count = 0;
+}
+
+int Full(Stack *S){
+    return (S->Count == MAXSTACK);
 }
