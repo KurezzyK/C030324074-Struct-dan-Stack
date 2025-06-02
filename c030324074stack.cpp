@@ -15,6 +15,7 @@ void InitializeStack(Stack *S);
 int Full(Stack *S);
 int Empty(Stack *S);
 void Pop(Stack *S, itemType *x);
+void Push(Stack *S, itemType x);
 
 int main(int argc, char const *argv[])
 {
@@ -47,4 +48,13 @@ void Pop(Stack *S, itemType *x){
         *x = S->Item[S->Count];
     }
 
+}
+
+void Push(Stack *S, itemType x){
+    if (Full(S)){
+        cout << "Stack sudah terisi" << endl;
+    } else {
+        S->Item[S->Count] = x;
+        ++(S->Count);
+    }
 }
