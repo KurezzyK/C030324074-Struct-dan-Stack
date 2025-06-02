@@ -14,6 +14,7 @@ typedef struct stack
 void InitializeStack(Stack *S);
 int Full(Stack *S);
 int Empty(Stack *S);
+void Pop(Stack *S, itemType *x);
 
 int main(int argc, char const *argv[])
 {
@@ -35,4 +36,15 @@ int Full(Stack *S){
 
 int Empty(Stack *S){
     return (S->Count == 0);
+}
+
+void Pop(Stack *S, itemType *x){
+    if (Empty(S))
+    {
+        cout << "Stack belum terisi" << endl;
+    }else{
+        --(S->Count);
+        *x = S->Item[S->Count];
+    }
+
 }
